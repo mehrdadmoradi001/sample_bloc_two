@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sample_bloc_two/ui/counter_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,9 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: CounterScreen(),
+    );
   }
 }
-
-
-
