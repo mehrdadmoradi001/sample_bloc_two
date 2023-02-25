@@ -6,15 +6,15 @@ class CounterBloc extends Bloc<CounterEvent,CounterState>{
   int counter = 100;
   CounterBloc():super(CounterInitial(100)){
     on<CounterDecrementPressed>((event, emit) {
-      emit(CounterUpdateDecrementState(counter--));
+      emit(CounterUpdateDecrementState(--counter));
     });
 
     on<CounterIncrementPressed>((event, emit) {
-      emit(CounterUpdateIncrementState(counter++));
+      emit(CounterUpdateIncrementState(++counter));
     });
 
     on<CounterResetPressed>((event, emit) {
-      int counter = 100;
+      counter = 0;
       emit(CounterResetState(counter));
     });
   }
